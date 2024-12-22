@@ -1,0 +1,186 @@
+/* CSS RESET */
+/* https://www.joshwcomeau.com/css/custom-css-reset/ */
+
+/* Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* Add accessible line-height */
+  line-height: 1.5;
+  /* Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  min-height: 100svh;
+}
+
+/* Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  /* Colors */
+  --blue: hsl(246, 80%, 60%);
+  --light-red-work: hsl(15, 100%, 70%);
+  --soft-blue-play: hsl(195, 74%, 62%);
+  --light-red-study: hsl(348, 100%, 68%);
+  --lime-green-exercise: hsl(145, 58%, 55%);
+  --violet-social: hsl(264, 64%, 52%);
+  --soft-orange-self-care: hsl(43, 84%, 65%);
+  --very-dark-blue: hsl(226, 43%, 10%);
+  --dark-blue: hsl(235, 46%, 20%);
+  --desaturated-blue: hsl(235, 45%, 61%);
+  --pale-blue: hsl(236, 100%, 87%);
+
+  /* Typography */
+  --font-family: "Rubik", sans-serif;
+  --font-size-body: 1.125rem; /* 18px */
+  --font-size-title: 1.5rem; /* 24px */
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--very-dark-blue);
+  color: var(--pale-blue);
+  display: grid;
+  place-content: center;
+}
+
+.container {
+  max-inline-size: 23.4375rem; /* 375px */
+  padding: 1rem;
+}
+
+.profile {
+  background-color: var(--dark-blue);
+  padding: 1.25rem; /* 20px */
+  border-radius: 10px;
+}
+
+.profile__header {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem; /* 20px */
+  margin-block-end: 1.25rem;
+}
+
+.profile__image {
+  width: 70px;
+  height: 70px;
+  border: 3px solid white;
+  border-radius: 50%;
+}
+
+.profile__info {
+  text-align: left;
+}
+
+.profile__title {
+  font-size: var(--font-size-body);
+}
+
+.profile__name {
+  font-size: var(--font-size-title);
+  margin: 10px 0;
+}
+
+.profile__nav {
+}
+
+.profile__nav-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.profile__nav-item {
+}
+
+.profile__nav-link {
+  color: var(--pale-blue);
+}
+
+.activity-cards {
+  margin-block-start: 1.25rem;
+}
+
+.activity-card {
+  background-color: var(--dark-blue);
+  padding: 1.25rem;
+  border-radius: 10px;
+  margin-block-end: 1.25rem;
+  position: relative;
+}
+
+.activity-card__icon {
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+}
+
+.activity-card__title {
+  font-size: var(--font-size-body);
+  margin-block-end: 0.625rem;
+}
+
+.activity-card__time {
+  display: flex;
+  justify-content: space-between;
+  margin-block-end: 0.625rem;
+}
+
+.activity-card__current,
+.activity-card__previous {
+}

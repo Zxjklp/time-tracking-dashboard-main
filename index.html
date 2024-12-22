@@ -1,80 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Time tracking dashboard</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Report for
-  Jeremy Robson
-
-  Daily
-  Weekly
-  Monthly
-
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
-  103hrs <!-- monthly -->
-  Previous - 128hrs <!-- monthly -->
-
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
-  10hrs <!-- weekly -->
-  Previous - 8hrs <!-- weekly -->
-  23hrs <!-- monthly -->
-  Previous - 29hrs <!-- monthly -->
-
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 7hrs <!-- weekly -->
-  13hrs <!-- monthly -->
-  Previous - 19hrs <!-- monthly -->
-
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 5hrs <!-- weekly -->
-  11hrs <!-- monthly -->
-  Previous - 18hrs <!-- monthly -->
-
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
-  5hrs <!-- weekly -->
-  Previous - 10hrs <!-- weekly -->
-  21hrs <!-- monthly -->
-  Previous - 23hrs <!-- monthly -->
-
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  2hrs <!-- weekly -->
-  Previous - 2hrs <!-- weekly -->
-  7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Time tracking dashboard for monitoring daily, weekly, and monthly activities."
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script defer src="./js/main.js"></script>
+    <title>Frontend Mentor | Time tracking dashboard</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="profile">
+        <div class="profile__header">
+          <img
+            src="./assets/images/image-jeremy.png"
+            alt="profile image of Jeremy Robson"
+            class="profile__image"
+          />
+          <div class="profile__info">
+            <h1 class="profile__title">Report for</h1>
+            <h2 class="profile__name">Jeremy Robson</h2>
+          </div>
+        </div>
+        <nav class="profile__nav">
+          <ul class="profile__nav-list">
+            <li class="profile__nav-item">
+              <a href="#" class="profile__nav-link">Daily</a>
+            </li>
+            <li class="profile__nav-item">
+              <a href="#" class="profile__nav-link">Weekly</a>
+            </li>
+            <li class="profile__nav-item">
+              <a href="#" class="profile__nav-link">Monthly</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section class="activity-cards">
+          <article class="activity-card activity-card--work">
+            <img
+              src="./assets/images/icon-work.svg"
+              alt=""
+              class="activity-card__icon"
+            />
+            <h3 class="activity-card__title">Work</h3>
+            <div class="activity-card__time">
+              <p class="activity-card__current">5hrs</p>
+              <p class="activity-card__previous">Previous - 7hrs</p>
+            </div>
+            <div class="activity-card__time">
+              <p class="activity-card__current">32hrs</p>
+              <p class="activity-card__previous">Previous - 36hrs</p>
+            </div>
+            <div class="activity-card__time">
+              <p class="activity-card__current">103hrs</p>
+              <p class="activity-card__previous">Previous - 128hrs</p>
+            </div>
+          </article>
+          <article class="activity-card activity-card--play">
+            <img
+              src="./assets/images/icon-play.svg"
+              alt=""
+              class="activity-card__icon"
+            />
+            <h3 class="activity-card__title">Play</h3>
+            <div class="activity-card__time">
+              <p class="activity-card__current">1hr</p>
+              <p class="activity-card__previous">Previous - 2hrs</p>
+            </div>
+            <div class="activity-card__time">
+              <p class="activity-card__current">10hrs</p>
+              <p class="activity-card__previous">Previous - 8hrs</p>
+            </div>
+            <div class="activity-card__time">
+              <p class="activity-card__current">23hrs</p>
+              <p class="activity-card__previous">Previous - 29hrs</p>
+            </div>
+          </article>
+          <article class="activity-card activity-card--study">
+            <img
+              src="./assets/images/icon-study.svg"
+              alt=""
+              class="activity-card__icon"
+            />
+            <h3 class="activity-card__title">Study</h3>
+            <div class="activity-card__time">
+              <p class="activity-card__current">0hrs</p>
+              <p class="activity-card__previous">Previous - 1hr</p>
+            </div>
+            <div class="activity-card__time">
+              <p class="activity-card__current">4hrs</p>
+              <p class="activity-card__previous">Previous - 7hrs</p>
+            </div>
+            <div class="activity-card__time">
+              <p class="activity-card__current">13hrs</p>
+              <p class="activity-card__previous">Previous - 19hrs</p>
+            </div>
+          </article>
+          <article class="activity-card activity-card--exercise">
+            <img
+              src="./assets/images/icon-exercise.svg"
+              alt=""
+              class="activity-card__icon"
+            />
+            <h3 class="activity-card__title">Exercise</h3>
+            <div class="activity-card__time">
+              <p class="activity-card__current">1hr</p>
+              <p class="activity-card__previous">Previous - 1hr</p>
+            </div>
+            <div class="activity-card__time">
+              <p class="activity-card__current">4hrs</p>
+              <p class="activity-card__previous">Previous - 5hrs</p>
+            </div>
+            <div class="activity-card__time">
+              <p class="activity-card__current">11hrs</p>
+              <p class="activity-card__previous">Previous - 18hrs</p>
+            </div>
+          </article>
+          <article class="activity-card activity-card--social">
+            <img
+              src="./assets/images/icon-social.svg"
+              alt=""
+              class="activity-card__icon"
+            />
+            <h3 class="activity-card__title">Social</h3>
+            <div class="activity-card__time">
+              <p class="activity-card__current">1hr</p>
+              <p class="activity-card__previous">Previous - 3hrs</p>
+            </div>
+            <div class="activity-card__time">
+              <p class="activity-card__current">5hrs</p>
+              <p class="activity-card__previous">Previous - 10hrs</p>
+            </div>
+            <div class="activity-card__time">
+              <p class="activity-card__current">21hrs</p>
+              <p class="activity-card__previous">Previous - 23hrs</p>
+            </div>
+          </article>
+          <article class="activity-card activity-card--self-care">
+            <img
+              src="./assets/images/icon-self-care.svg"
+              alt=""
+              class="activity-card__icon"
+            />
+            <h3 class="activity-card__title">Self Care</h3>
+            <div class="activity-card__time">
+              <p class="activity-card__current">0hrs</p>
+              <p class="activity-card__previous">Previous - 1hr</p>
+            </div>
+            <div class="activity-card__time">
+              <p class="activity-card__current">2hrs</p>
+              <p class="activity-card__previous">Previous - 2hrs</p>
+            </div>
+            <div class="activity-card__time">
+              <p class="activity-card__current">7hrs</p>
+              <p class="activity-card__previous">Previous - 11hrs</p>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+  </body>
 </html>
