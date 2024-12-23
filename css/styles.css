@@ -1,3 +1,25 @@
+:root {
+  /* Colors */
+  --blue: hsl(246, 80%, 60%);
+  --light-red-work: hsl(15, 100%, 70%);
+  --soft-blue-play: hsl(195, 74%, 62%);
+  --light-red-study: hsl(348, 100%, 68%);
+  --lime-green-exercise: hsl(145, 58%, 55%);
+  --violet-social: hsl(264, 64%, 52%);
+  --soft-orange-self-care: hsl(43, 84%, 65%);
+  --very-dark-blue: hsl(226, 43%, 10%);
+  --dark-blue: hsl(235, 46%, 20%);
+  --desaturated-blue: hsl(235, 45%, 61%);
+  --pale-blue: hsl(236, 100%, 87%);
+
+  /* Typography */
+  --font-family: "Rubik", sans-serif;
+  --font-size-title: 1.125rem; /* 18px */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+}
+
 /* CSS RESET */
 /* https://www.joshwcomeau.com/css/custom-css-reset/ */
 
@@ -67,26 +89,6 @@ a {
   text-decoration: none;
 }
 
-:root {
-  /* Colors */
-  --blue: hsl(246, 80%, 60%);
-  --light-red-work: hsl(15, 100%, 70%);
-  --soft-blue-play: hsl(195, 74%, 62%);
-  --light-red-study: hsl(348, 100%, 68%);
-  --lime-green-exercise: hsl(145, 58%, 55%);
-  --violet-social: hsl(264, 64%, 52%);
-  --soft-orange-self-care: hsl(43, 84%, 65%);
-  --very-dark-blue: hsl(226, 43%, 10%);
-  --dark-blue: hsl(235, 46%, 20%);
-  --desaturated-blue: hsl(235, 45%, 61%);
-  --pale-blue: hsl(236, 100%, 87%);
-
-  /* Typography */
-  --font-family: "Rubik", sans-serif;
-  --font-size-body: 1.125rem; /* 18px */
-  --font-size-title: 1.5rem; /* 24px */
-}
-
 body {
   font-family: var(--font-family);
   background-color: var(--very-dark-blue);
@@ -102,35 +104,42 @@ body {
 
 .profile {
   background-color: var(--dark-blue);
-  padding: 1.25rem; /* 20px */
+  padding-block-end: 1.25rem;
   border-radius: 10px;
+  overflow: hidden;
 }
 
 .profile__header {
   display: flex;
   align-items: center;
-  gap: 1.25rem; /* 20px */
-  margin-block-end: 1.25rem;
+  gap: 1.25rem;
+  background-color: var(--blue);
+  padding: 1.6rem; 
+  border-radius: 0 0 10px 10px;
+  margin-block-end: 1.25rem; 
 }
 
 .profile__image {
-  width: 70px;
-  height: 70px;
+  width: 64px;
+  height: 64px;
   border: 3px solid white;
   border-radius: 50%;
 }
 
 .profile__info {
-  text-align: left;
+  /* text-align: left; */
 }
 
 .profile__title {
-  font-size: var(--font-size-body);
+  font-size: 0.9375rem; /* 15px */
+  font-weight: var(--fw-regular);
 }
 
 .profile__name {
-  font-size: var(--font-size-title);
-  margin: 10px 0;
+  color: #ffffff;
+  font-size: 1.5rem; /* 24px */
+  font-weight: var(--fw-light);
+  /* margin: 10px 0; */
 }
 
 .profile__nav {
@@ -148,7 +157,15 @@ body {
 
 .profile__nav-link {
   color: var(--pale-blue);
+  font-size: var(--font-size-title);
+  font-weight: var(--fw-regular);
+  transition: all 0.3s ease;
 }
+.profile__nav-link:hover,
+.profile__nav-link:active {
+  color: #ffffff;
+}
+
 
 .activity-cards {
   margin-block-start: 1.25rem;
