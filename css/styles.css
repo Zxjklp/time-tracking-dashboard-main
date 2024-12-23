@@ -93,20 +93,19 @@ body {
   font-family: var(--font-family);
   background-color: var(--very-dark-blue);
   color: var(--pale-blue);
-  display: grid;
-  place-content: center;
+  padding: 1rem;
+  /* display: grid; */
+  /* place-content: center; */
 }
 
 .container {
-  max-inline-size: 23.4375rem; /* 375px */
-  padding: 1rem;
 }
 
 .profile {
   background-color: var(--dark-blue);
   padding-block-end: 1.25rem;
-  border-radius: 10px;
-  overflow: hidden;
+  border-radius: 15px;
+  margin-block-end: 1.25rem;
 }
 
 .profile__header {
@@ -114,9 +113,9 @@ body {
   align-items: center;
   gap: 1.25rem;
   background-color: var(--blue);
-  padding: 1.6rem; 
-  border-radius: 0 0 10px 10px;
-  margin-block-end: 1.25rem; 
+  padding: 1.6rem;
+  border-radius: 15px;
+  margin-block-end: 1.25rem;
 }
 
 .profile__image {
@@ -127,7 +126,6 @@ body {
 }
 
 .profile__info {
-  /* text-align: left; */
 }
 
 .profile__title {
@@ -139,7 +137,6 @@ body {
   color: #ffffff;
   font-size: 1.5rem; /* 24px */
   font-weight: var(--fw-light);
-  /* margin: 10px 0; */
 }
 
 .profile__nav {
@@ -156,48 +153,107 @@ body {
 }
 
 .profile__nav-link {
-  color: var(--pale-blue);
+  color: var(--desaturated-blue);
   font-size: var(--font-size-title);
   font-weight: var(--fw-regular);
   transition: all 0.3s ease;
 }
-.profile__nav-link:hover,
-.profile__nav-link:active {
+.profile__nav-link:hover {
   color: #ffffff;
 }
 
-
 .activity-cards {
-  margin-block-start: 1.25rem;
 }
 
 .activity-card {
-  background-color: var(--dark-blue);
-  padding: 1.25rem;
-  border-radius: 10px;
+  border-radius: 15px;
   margin-block-end: 1.25rem;
-  position: relative;
+  overflow: hidden;
 }
 
-.activity-card__icon {
-  position: absolute;
-  top: -10px;
-  right: 20px;
-  width: 40px;
-  height: 40px;
+.activity-card--work {
+  background: linear-gradient(var(--light-red-work) 0%, var(--light-red-work) 50%, transparent 50%, transparent 100%);
+}
+
+.activity-card--play {
+  background: linear-gradient(var(--soft-blue-play) 0%, var(--soft-blue-play) 50%, transparent 50%, transparent 100%);
+}
+
+.activity-card--study {
+  background: linear-gradient(var(--light-red-study) 0%, var(--light-red-study) 50%, transparent 50%, transparent 100%);
+}
+
+.activity-card--exercise {
+  background: linear-gradient(var(--lime-green-exercise) 0%, var(--lime-green-exercise) 50%, transparent 50%, transparent 100%);
+}
+
+.activity-card--social {
+  background: linear-gradient(var(--violet-social) 0%, var(--violet-social) 50%, transparent 50%, transparent 100%);
+}
+
+.activity-card--self-care {
+  background: linear-gradient(var(--soft-orange-self-care) 0%, var(--soft-orange-self-care) 50%, transparent 50%, transparent 100%);
+}
+
+.activity-card__header {
+  height: 39px;
+  position: relative;
+  background-position: top -4px right 20px;
+  background-repeat: no-repeat;
+  z-index: 2;
+}
+
+.activity-card__content {
+  background-color: var(--dark-blue);
+  padding: 1.5rem;
+  border-radius: 15px 15px 0 0;
+
 }
 
 .activity-card__title {
-  font-size: var(--font-size-body);
-  margin-block-end: 0.625rem;
+  font-size: var(--font-size-title);
+  font-weight: var(--fw-medium);
+  color: #ffffff;
 }
 
 .activity-card__time {
   display: flex;
   justify-content: space-between;
-  margin-block-end: 0.625rem;
+  align-items: center;
 }
 
-.activity-card__current,
+.activity-card__current {
+  font-size: 2rem;
+  font-weight: var(--fw-light);
+  color: white;
+}
+
 .activity-card__previous {
+  font-size: 0.9375rem;
+  color: var(--pale-blue);
+}
+
+/* Background images for each card type */
+.activity-card--work .activity-card__header {
+  background-image: url('../assets/images/icon-work.svg');
+}
+
+.activity-card--play .activity-card__header {
+  background-image: url('../assets/images/icon-play.svg');
+}
+
+.activity-card--study .activity-card__header {
+  background-image: url('../assets/images/icon-study.svg');
+}
+
+.activity-card--exercise .activity-card__header {
+  background-image: url('../assets/images/icon-exercise.svg');
+}
+
+.activity-card--social .activity-card__header {
+  background-image: url('../assets/images/icon-social.svg');
+}
+
+.activity-card--self-care .activity-card__header {
+  background-image: url('../assets/images/icon-self-care.svg');
 }
