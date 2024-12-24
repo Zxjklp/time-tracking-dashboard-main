@@ -12,11 +12,11 @@
   --desaturated-blue: hsl(235, 45%, 61%);
   --pale-blue: hsl(236, 100%, 87%);
   --white: #ffffff;
-  --dark-blue-hover: #33397A;
+  --dark-blue-hover: #33397a;
 
   /* Typography */
   --font-family: "Rubik", sans-serif;
-  --font-size-title: 1.125rem; /* 18px */
+  --font-size-title: 1.125rem;
   --fw-light: 300;
   --fw-regular: 400;
   --fw-medium: 500;
@@ -96,18 +96,15 @@ body {
   background-color: var(--very-dark-blue);
   color: var(--pale-blue);
   padding: 1rem;
-  /* display: grid; */
-  /* place-content: center; */
-}
-
-.container {
+  display: grid;
+  place-content: center;
 }
 
 .profile {
   background-color: var(--dark-blue);
   padding-block-end: 1.25rem;
   border-radius: 15px;
-  margin-block-end: 2rem;
+  margin-block-end: 1.25rem;
 }
 
 .profile__header {
@@ -127,9 +124,6 @@ body {
   border-radius: 50%;
 }
 
-.profile__info {
-}
-
 .profile__title {
   font-size: 0.9375rem;
   font-weight: var(--fw-regular);
@@ -141,17 +135,11 @@ body {
   font-weight: var(--fw-light);
 }
 
-.profile__nav {
-}
-
 .profile__nav-list {
   list-style: none;
   padding: 0;
   display: flex;
   justify-content: space-around;
-}
-
-.profile__nav-item {
 }
 
 .profile__nav-link {
@@ -163,9 +151,6 @@ body {
 .profile__nav-link:hover,
 .profile__nav-link.active {
   color: var(--white);
-}
-
-.activity-cards {
 }
 
 .activity-card {
@@ -315,4 +300,71 @@ body {
 
 .activity-card--self-care .activity-card__header {
   background-image: url("../assets/images/icon-self-care.svg");
+}
+
+@media (min-width: 64rem) {
+  .container {
+    max-width: 75rem;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 2rem;
+  }
+
+  .profile {
+    grid-column: span 1;
+    padding-block-end: initial;
+    margin-block-end: initial;
+  }
+
+  .profile__header {
+    flex-direction: column;
+    align-items: initial;
+    gap: 2.5rem;
+    padding-block-end: 4.9rem;
+    margin-block-end: initial;
+  }
+
+  .profile__image {
+    width: 78px;
+    height: 78px;
+  }
+
+  .profile__name {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+
+  .profile__nav-list {
+    flex-direction: column;
+    padding: 1.6rem 0 0 1.6rem;
+  }
+
+  .profile__nav-link {
+    display: block;
+    margin-bottom: 0.6rem;
+  }
+
+  .activity-cards {
+    grid-column: span 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .activity-card {
+    margin-block-end: initial;
+  }
+
+  .activity-card__content {
+    padding: 2rem;
+  }
+
+  .activity-card__time {
+    flex-direction: column;
+    align-items: initial;
+  }
+
+  .activity-card__current {
+    font-size: 3.5rem;
+  }
 }
