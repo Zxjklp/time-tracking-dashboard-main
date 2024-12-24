@@ -1,7 +1,6 @@
 const navLinks = document.querySelectorAll(".profile__nav-link");
 const activityCards = document.querySelectorAll(".activity-card");
 
-// Fetch data from data.json
 fetch("./data.json")
   .then((response) => response.json())
   .then((data) => {
