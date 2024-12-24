@@ -230,7 +230,6 @@ body {
 
 .activity-card__header {
   height: 36px;
-  position: relative;
   background-position: top -7px right 20px;
   background-repeat: no-repeat;
 }
