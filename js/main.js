@@ -1,4 +1,4 @@
-const navLinks = document.querySelectorAll(".profile__nav-link");
+const navLinks = document.querySelector(".profile__nav-list");
 const activityCards = document.querySelectorAll(".activity-card");
 
 fetch("./data.json")
@@ -6,6 +6,12 @@ fetch("./data.json")
   .then((data) => {
     // Function to update the card values based on the selected timeframe
     const updateCards = (timeframe) => {
+      const previousText = {
+        daily: "Yesterday",
+        weekly: "Last Week",
+        monthly: "Last Month",
+      };
+
       activityCards.forEach((card) => {
         const title = card.querySelector(".activity-card__title").textContent;
         const current = card.querySelector(".activity-card__current");
@@ -14,27 +20,27 @@ fetch("./data.json")
         const activity = data.find((item) => item.title === title);
         if (activity) {
           current.textContent = `${activity.timeframes[timeframe].current}hrs`;
-          previous.textContent = `Last Week - ${activity.timeframes[timeframe].previous}hrs`;
+          previous.textContent = `${previousText[timeframe]} - ${activity.timeframes[timeframe].previous}hrs`;
         }
       });
     };
 
     // Function to set the active link
     const setActiveLink = (activeLink) => {
-      navLinks.forEach((link) => {
+      document.querySelectorAll(".profile__nav-link").forEach((link) => {
         link.classList.remove("active");
       });
       activeLink.classList.add("active");
     };
 
-    // Add event listeners to the nav links
-    navLinks.forEach((link) => {
-      link.addEventListener("click", (event) => {
+    // Event delegation for nav links
+    navLinks.addEventListener("click", (event) => {
+      if (event.target.classList.contains("profile__nav-link")) {
         event.preventDefault();
-        const timeframe = link.dataset.timeframe;
+        const timeframe = event.target.dataset.timeframe;
         updateCards(timeframe);
-        setActiveLink(link);
-      });
+        setActiveLink(event.target);
+      }
     });
 
     // Initialize with weekly data and set the active link
