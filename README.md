@@ -8,7 +8,7 @@ This is a solution to the [Time tracking dashboard challenge on Frontend Mentor]
 
 ### Links
 
-- [Solution URL](https://www.frontendmentor.io/solutions/time-tracking-dashboard-solution-using-css-grid-4jOyGarTs5)
+- [Solution](https://www.frontendmentor.io/solutions/time-tracking-dashboard-solution-using-css-grid-4jOyGarTs5)
 - [Live Site](https://zxjklp.github.io/time-tracking-dashboard-main/)
 
 ### Built With
